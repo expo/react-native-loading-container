@@ -7,6 +7,7 @@
 
 import React, {
   ListView,
+  Platform,
   PropTypes,
   StyleSheet,
   Text,
@@ -131,7 +132,7 @@ export default class DetailScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 64,
+    marginTop: Platform.OS === 'ios' ? 64 : 60,
     flex: 1,
   },
   storyTitleText: {

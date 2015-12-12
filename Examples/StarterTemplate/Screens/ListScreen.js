@@ -8,6 +8,7 @@
 import React, {
   Image,
   ListView,
+  Platform,
   StyleSheet,
   Text,
   TouchableHighlight,
@@ -101,7 +102,7 @@ export default class ListScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 64,
+    marginTop: Platform.OS === 'ios' ? 64 : 60,
   },
   row: {
     flexDirection: 'row',

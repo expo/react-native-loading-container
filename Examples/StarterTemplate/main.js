@@ -9,6 +9,7 @@
 import React, {
   AppRegistry,
   BackAndroid,
+  Platform,
   StatusBarIOS,
   StyleSheet,
   Navigator,
@@ -41,11 +42,14 @@ class Main extends React.Component {
     let initialRoute = ExRouter.getHomeRoute();
 
     return (
-      <ExNavigator
-        ref={component => this._navigator = component}
-        initialRoute={initialRoute}
-        renderNavigationBar={props => <Navigator.NavigationBar {...props} style={styles.navigationBar} />}
-      />
+      <View style={{flex: 1}}>
+        <View style={styles.spacer} />
+        <ExNavigator
+          ref={component => this._navigator = component}
+          initialRoute={initialRoute}
+          renderNavigationBar={props => <Navigator.NavigationBar {...props} style={styles.navigationBar} />}
+        />
+      </View>
     );
   }
 }
@@ -58,10 +62,9 @@ let styles = StyleSheet.create({
   navigationBar: {
     backgroundColor: '#05a5d1',
   },
-  navigationBarText: {
-    color: '#fff',
-    fontWeight: '700',
-    fontSize: 16,
+  spacer: {
+    height: Platform.OS === 'android' ? 30 : 0,
+    backgroundColor: '#05a5d1',
   },
 });
 

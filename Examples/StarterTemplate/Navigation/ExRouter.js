@@ -74,7 +74,7 @@ if (Platform.OS === 'android') {
 
 let titleTextStyle = {
   color: '#fff',
-  fontSize: 15,
+  fontSize: Platform.OS === 'ios' ? 15 : 18,
   fontWeight: 'bold',
   marginTop: 13,
 };
