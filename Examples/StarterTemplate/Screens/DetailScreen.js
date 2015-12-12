@@ -14,6 +14,7 @@ import React, {
 } from 'react-native';
 
 import LoadingContainer from '@exponent/react-native-loading-container';
+import fetchWithTimeout from 'fetchWithTimeout'
 
 const IS_NESTED_COMMENT = 'this-is-a-nested-comment';
 
@@ -94,7 +95,7 @@ export default class DetailScreen extends React.Component {
   }
 
   async _loadInitialDataAsync() {
-    let response = await fetch(`https://www.reddit.com/${this.props.url}.json`);
+    let response = await fetchWithTimeout(`https://www.reddit.com/${this.props.url}.json`);
     return response.json();
   }
 

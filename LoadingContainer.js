@@ -81,12 +81,12 @@ export default class LoadingContainer extends React.Component {
 
     this.setState({ isLoading: true });
     this.showLoadingOverlay();
-    let result;
 
     try {
       result = await this.props.onLoadStartAsync();
     } catch (e) {
       this._handleError(e);
+      return;
     }
 
     await this.props.onReadyAsync(result);
@@ -95,6 +95,7 @@ export default class LoadingContainer extends React.Component {
   }
 
   _handleError(e) {
+    this.setState({ isLoading: false });
     this._errorOverlay.showOverlay();
     this._loadingOverlay.hideOverlay();
     if (this.props.onError) {

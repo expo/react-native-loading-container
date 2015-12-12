@@ -38,12 +38,13 @@ export default class ErrorOverlay extends React.Component {
       return null;
     }
 
+    // <Image
+    //   source={{uri: NO_NETWORK_IMAGE_URI}}
+    //   resizeMode="contain"
+    //   style={{width: 60, height: 60, marginBottom: 10}} />
+
     return (
       <TouchableOpacity style={styles.overlay} onPress={this.props.onRetryLoad}>
-        <Image
-          source={{uri: NO_NETWORK_IMAGE_URI}}
-          resizeMode="contain"
-          style={{width: 60, height: 60, marginBottom: 10}} />
         <Text style={{color: '#ababad', fontSize: 14}}>
           Unable to contact server. Tap to retry.
         </Text>

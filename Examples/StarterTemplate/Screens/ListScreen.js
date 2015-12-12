@@ -16,6 +16,7 @@ import React, {
 
 import ExRouter from 'ExRouter';
 import LoadingContainer from '@exponent/react-native-loading-container';
+import fetchWithTimeout from 'fetchWithTimeout'
 
 const SELF_IMAGE = "https://s3-us-west-2.amazonaws.com/examples-exp/reddit/self.png";
 const DEFAULT_IMAGE = "https://s3-us-west-2.amazonaws.com/examples-exp/reddit/default.png";
@@ -85,7 +86,7 @@ export default class ListScreen extends React.Component {
   }
 
   async _loadInitialDataAsync() {
-    let response = await fetch('https://www.reddit.com/r/reactnative.json');
+    let response = await fetchWithTimeout('https://www.reddit.com/r/reactnative.json');
     return response.json();
   }
 
