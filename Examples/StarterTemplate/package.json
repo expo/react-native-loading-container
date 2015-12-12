@@ -13,5 +13,10 @@
     "react-native-clone-referenced-element": "^1.0.0",
     "react-native-loading-container": "file:../..",
     "react-native-timer-mixin": "^0.11.0"
+  },
+  "exp": {
+    "name": "/r/reactnative",
+    "primaryColor": "#00A4D3",
+    "iconUrl": "https://s3-us-west-2.amazonaws.com/examples-exp/reddit/icon.png"
   }
 }
