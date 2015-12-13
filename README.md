@@ -58,7 +58,7 @@ export default class ListScreen extends React.Component {
 }
 ```
 
-A complete, runnable example is available in [Examples/StarterTemplate](https://github.com/exponentjs/react-native-loading-container/tree/master/Examples/StarterTemplate), or you can try it from exponent at [exp://exp.host/@brentvatne/StarterTemplate](exp://exp.host/@brentvatne/StarterTemplate).
+A complete, runnable example is available in [Examples/StarterTemplate](https://github.com/exponentjs/react-native-loading-container/tree/master/Examples/StarterTemplate), or you can try it from Exponent at [exp://exp.host/@brentvatne/StarterTemplate](http://exp.host/--/to-exp/exp%3A%2F%2Fexp.host%2F%40brentvatne%2FStarterTemplate).
 
 ### Customization
 
