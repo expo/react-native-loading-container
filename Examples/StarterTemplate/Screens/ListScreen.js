@@ -16,7 +16,7 @@ import React, {
 } from 'react-native';
 
 import ExRouter from 'ExRouter';
-import LoadingContainer from '@exponent/react-native-loading-container';
+import LoadingContainer from 'react-native-loading-container';
 import fetchWithTimeout from 'fetchWithTimeout'
 
 const SELF_IMAGE = "https://s3-us-west-2.amazonaws.com/examples-exp/reddit/self.png";

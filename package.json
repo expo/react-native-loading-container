@@ -1,5 +1,5 @@
 {
-  "name": "@exponent/react-native-loading-container",
+  "name": "react-native-loading-container",
   "version": "0.1.0",
   "description": "",
   "main": "LoadingContainer.js",

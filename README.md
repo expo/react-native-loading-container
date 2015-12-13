@@ -9,7 +9,7 @@ We are building an app where pretty much every screen has to fetch new data, so 
 ## Installation
 
 ```
-npm install @exponent/react-native-loading-container --save
+npm install react-native-loading-container --save
 ```
 
 LoadingContainer is compatible with React Native 0.15 and newer.
@@ -19,10 +19,8 @@ LoadingContainer is compatible with React Native 0.15 and newer.
 Import LoadingContainer as a JavaScript module:
 
 ```js
-import LoadingContainer from '@exponent/react-native-loading-container';
+import LoadingContainer from 'react-native-loading-container';
 ```
-
-LoadingContainer is intended to wrap the content of your scene components. A scene component is the top-level component for each route.
 
 The only two props that are required are `onLoadStartAsync` and `onReadyAsync` - these must both be [async functions](https://medium.com/the-exponent-log/react-native-meets-async-functions-3e6f81111173#.y5ulf6wqj) (or return Promises), and must resolve when they are completed.
 
@@ -58,7 +56,10 @@ export default class ListScreen extends React.Component {
 }
 ```
 
-A complete, runnable example is available in [Examples/StarterTemplate](https://github.com/exponentjs/react-native-loading-container/tree/master/Examples/StarterTemplate), or you can try it from Exponent at [exp://exp.host/@brentvatne/StarterTemplate](http://exp.host/--/to-exp/exp%3A%2F%2Fexp.host%2F%40brentvatne%2FStarterTemplate).
+A complete, runnable example is available in [Examples/StarterTemplate](https://github.com/exponentjs/react-native-loading-container/tree/master/Examples/StarterTemplate), or you can try it from Exponent at [exp://exp.host/@brentvatne/StarterTemplate](https://exp.host/@brentvatne/StartTemplate).
+
+LoadingContainer can be used anywhere, but is especially well-suited to wrapping the content of your scene components. A scene component is the top-level component for each route.
+
 
 ### Customization
 

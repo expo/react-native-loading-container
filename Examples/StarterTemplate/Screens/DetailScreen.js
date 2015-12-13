@@ -14,7 +14,7 @@ import React, {
   View,
 } from 'react-native';
 
-import LoadingContainer from '@exponent/react-native-loading-container';
+import LoadingContainer from 'react-native-loading-container';
 import fetchWithTimeout from 'fetchWithTimeout'
 
 const IS_NESTED_COMMENT = 'this-is-a-nested-comment';
