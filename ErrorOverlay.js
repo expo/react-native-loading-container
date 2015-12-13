@@ -7,6 +7,7 @@
 
 import React, {
   Image,
+  PropTypes,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -16,12 +17,13 @@ import React, {
 let NO_NETWORK_IMAGE_URI = '';
 
 export default class ErrorOverlay extends React.Component {
+
+  static propTypes = {
+    onRetryLoad: PropTypes.func.isRequired,
+  };
+
   constructor(props, context) {
     super(props, context);
-
-    this.hideOverlay = this.hideOverlay.bind(this);
-    this.showOverlay = this.showOverlay.bind(this);
-
     this.state = { overlayHidden: true };
   }
 

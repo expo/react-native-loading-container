@@ -20,10 +20,6 @@ export default class LoadingOverlay extends React.Component {
   constructor(props) {
     super(props);
 
-    this.fadeOverlay = this.fadeOverlay.bind(this);
-    this.hideOverlay = this.hideOverlay.bind(this);
-    this.showOverlay = this.showOverlay.bind(this);
-
     this.state = {
       overlayHidden: false,
       overlayOpacity: new Animated.Value(1),

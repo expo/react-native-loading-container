@@ -6,7 +6,11 @@
 'use strict';
 
 import React from 'react-native';
-import { PropTypes, StyleSheet, View } from 'react-native';
+import {
+  PropTypes,
+  StyleSheet,
+  View,
+} from 'react-native';
 import ReactMixin from 'react-mixin';
 import TimerMixin from 'react-native-timer-mixin';
 
@@ -48,10 +52,6 @@ export default class LoadingContainer extends React.Component {
   showLoadingOverlay() {
     this._errorOverlay.hideOverlay();
     this._loadingOverlay.showOverlay();
-  }
-
-  forceReload() {
-    this._attemptLoadAsync();
   }
 
   render() {

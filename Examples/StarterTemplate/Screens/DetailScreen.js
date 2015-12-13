@@ -39,7 +39,6 @@ export default class DetailScreen extends React.Component {
     this.state = {
       dataSource,
       story: null,
-      isReady: false,
     };
   }
 
@@ -104,7 +103,7 @@ export default class DetailScreen extends React.Component {
     let dataSource = this.state.dataSource.cloneWithRows(comments);
 
     return new Promise((resolve) => {
-      this.setState({story, dataSource, isReady: true}, resolve);
+      this.setState({story, dataSource}, resolve);
     });
   }
 

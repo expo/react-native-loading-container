@@ -47,7 +47,6 @@ export default class ListScreen extends React.Component {
 
     this.state = {
       dataSource,
-      isReady: false,
     };
   }
 
@@ -95,7 +94,7 @@ export default class ListScreen extends React.Component {
     let dataSource = this.state.dataSource.cloneWithRows(stories);
 
     return new Promise((resolve) => {
-      this.setState({dataSource, isReady: true}, resolve);
+      this.setState({dataSource}, resolve);
     });
   }
 }

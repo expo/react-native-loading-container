@@ -13,7 +13,7 @@ import React, {
   View,
 } from 'react-native';
 
-export default class ArticleLoadingIndicator extends React.Component {
+export default class DefaultLoadingIndicator extends React.Component {
 
   render() {
     if (Platform.OS === 'android') {
