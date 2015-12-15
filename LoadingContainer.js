@@ -20,6 +20,10 @@ import LoadingOverlay from './LoadingOverlay';
 import ErrorOverlay from './ErrorOverlay';
 
 export default class LoadingContainer extends React.Component {
+
+  static LoadingOverlay = LoadingOverlay;
+  static ErrorOverlay = ErrorOverlay;
+
   static propTypes = {
     onLoadStartAsync: PropTypes.func.isRequired,
     onReadyAsync: PropTypes.func.isRequired,
@@ -81,6 +85,7 @@ export default class LoadingContainer extends React.Component {
 
     this.setState({ isLoading: true });
     this.showLoadingOverlay();
+    let result;
 
     try {
       result = await this.props.onLoadStartAsync();
