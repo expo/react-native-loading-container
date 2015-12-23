@@ -17,8 +17,8 @@ import DefaultLoadingIndicator from './DefaultLoadingIndicator';
 const FADE_DELAY_MS = 85;
 
 export default class LoadingOverlay extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
 
     this.state = {
       overlayHidden: false,
@@ -63,8 +63,12 @@ export default class LoadingOverlay extends React.Component {
       <Animated.View
         pointerEvents="none"
         needsOffscreenAlphaCompositing
-        style={[styles.overlay, opacityStyle]}>
-        <DefaultLoadingIndicator />
+        style={[styles.overlay, opacityStyle, this.props.style]}>
+        {
+          React.Children.count(this.props.children) > 0 ?
+            this.props.children :
+            <DefaultLoadingIndicator />
+        }
       </Animated.View>
     );
   }
