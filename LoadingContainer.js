@@ -59,8 +59,8 @@ export default class LoadingContainer extends React.Component {
   }
 
   async reloadAsync() {
-    this.setState({ isLoading: false });
     this._attemptLoadAsync();
+    return;
   }
 
   render() {
