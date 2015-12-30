@@ -58,6 +58,11 @@ export default class LoadingContainer extends React.Component {
     this._loadingOverlay.showOverlay();
   }
 
+  async reloadAsync() {
+    this.setState({ isLoading: false });
+    this._attemptLoadAsync();
+  }
+
   render() {
     let loadingOverlay = cloneReferencedElement(
       this.props.renderLoadingOverlay({}),
