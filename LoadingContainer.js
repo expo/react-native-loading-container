@@ -14,7 +14,7 @@ import {
 import ReactMixin from 'react-mixin';
 import TimerMixin from 'react-native-timer-mixin';
 
-import cloneReferencedElement from 'react-native-clone-referenced-element';
+import cloneReferencedElement from 'react-clone-referenced-element';
 
 import LoadingOverlay from './LoadingOverlay';
 import ErrorOverlay from './ErrorOverlay';
