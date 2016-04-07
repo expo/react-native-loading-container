@@ -105,8 +105,8 @@ export default class LoadingContainer extends React.Component {
 
   _handleError(e) {
     this.setState({ isLoading: false });
-    this._errorOverlay.showOverlay();
-    this._loadingOverlay.hideOverlay();
+    this._errorOverlay && this._errorOverlay.showOverlay();
+    this._loadingOverlay && this._loadingOverlay.hideOverlay();
     if (this.props.onError) {
       this.props.onError(e);
     }
