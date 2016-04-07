@@ -99,7 +99,7 @@ export default class LoadingContainer extends React.Component {
     }
 
     await this.props.onReadyAsync(result);
-    this._loadingOverlay.fadeOverlay();
+    this._loadingOverlay && this._loadingOverlay.fadeOverlay();
     this.setState({ isLoading: false });
   }
 

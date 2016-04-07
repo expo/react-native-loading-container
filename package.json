@@ -1,6 +1,6 @@
 {
   "name": "react-native-loading-container",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "",
   "main": "LoadingContainer.js",
   "scripts": {
