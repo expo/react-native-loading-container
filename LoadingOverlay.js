@@ -5,11 +5,13 @@
  */
 'use strict';
 
-import React, {
+import React from 'react';
+
+import {
   Animated,
   Easing,
   StyleSheet,
-  View,
+  View
 } from 'react-native';
 
 import DefaultLoadingIndicator from './DefaultLoadingIndicator';
