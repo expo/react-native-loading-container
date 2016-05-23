@@ -5,12 +5,14 @@
  */
 'use strict';
 
-import React, {
+import React from 'react';
+
+import {
   ActivityIndicatorIOS,
   Platform,
   ProgressBarAndroid,
   StyleSheet,
-  View,
+  View
 } from 'react-native';
 
 export default class DefaultLoadingIndicator extends React.Component {

@@ -6,11 +6,14 @@
 'use strict';
 
 import React, {
+  PropTypes
+} from 'react';
+
+import {
   Image,
-  PropTypes,
   StyleSheet,
   Text,
-  TouchableOpacity,
+  TouchableOpacity
 } from 'react-native';
 
 // todo(brentvatne): set some base64 image as default

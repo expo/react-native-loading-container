@@ -5,11 +5,13 @@
  */
 'use strict';
 
-import React from 'react-native';
+import React, {
+  PropTypes
+} from 'react';
+
 import {
-  PropTypes,
   StyleSheet,
-  View,
+  View
 } from 'react-native';
 import ReactMixin from 'react-mixin';
 import TimerMixin from 'react-native-timer-mixin';
