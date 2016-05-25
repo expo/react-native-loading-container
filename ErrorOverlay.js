@@ -5,9 +5,9 @@
  */
 'use strict';
 
-import React, {
+import React, { PropTypes } from 'react';
+import {
   Image,
-  PropTypes,
   StyleSheet,
   Text,
   TouchableOpacity,

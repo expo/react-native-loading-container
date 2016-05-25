@@ -5,10 +5,10 @@
  */
 'use strict';
 
-import React, {
+import React, { PropTypes } from 'react';
+import {
   ListView,
   Platform,
-  PropTypes,
   StyleSheet,
   Text,
   View,
