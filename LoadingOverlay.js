@@ -5,7 +5,8 @@
  */
 'use strict';
 
-import React, {
+import React from 'react';
+import {
   Animated,
   Easing,
   StyleSheet,
