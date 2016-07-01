@@ -69,7 +69,7 @@ Currently only the following props are exposed:
 
 - `onError` - invoked with the exception object when `onLoadStartAsync` throws an exception.
 - `renderLoadingOverlay` - returns a React element that will be rendered when loading is in progress. It must implement `showOverlay`, `hideOverlay` and `fadeOverlay` methods.
-- `renderErrorOverlay` - returns a React element that will be rendered when loading is in progress. It will receive a function prop called `onRetryLoad` that should be invoked when the user indicates that they would like retry fetching data.
+- `renderErrorOverlay` - returns a React element that will be rendered when error occurs. It will receive a function prop called `onRetryLoad` that should be invoked when the user indicates that they would like retry fetching data.
 
 ```js
 <LoadingContainer
