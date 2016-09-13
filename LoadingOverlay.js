@@ -14,8 +14,6 @@ import {
   View,
 } from 'react-native';
 
-import DefaultLoadingIndicator from './DefaultLoadingIndicator';
-
 const FADE_DELAY_MS = 85;
 
 export default class LoadingOverlay extends React.Component {
