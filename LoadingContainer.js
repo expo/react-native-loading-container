@@ -28,12 +28,16 @@ export default class LoadingContainer extends React.Component {
     onReadyAsync: PropTypes.func.isRequired,
     onError: PropTypes.func,
     renderLoadingOverlay: PropTypes.func.isRequired,
+    loadingOverlayStyle: PropTypes.object,
+    loadingIndicatorColor: PropTypes.string,
     renderErrorOverlay: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
     onReadyAsync: () => Promise.resolve(),
-    renderLoadingOverlay: props => <LoadingOverlay {...props} />,
+    renderLoadingOverlay: props => <LoadingOverlay {...props} /> ,
+    loadingOverlayStyle: {},
+    loadingIndicatorColor: '#ccc',
     renderErrorOverlay: props => <ErrorOverlay {...props} />,
   };
 
@@ -62,8 +66,11 @@ export default class LoadingContainer extends React.Component {
   }
 
   render() {
+    let loadingOverlayStyle = this.props.loadingOverlayStyle
+    let loadingIndicatorColor = this.props.loadingIndicatorColor
+
     let loadingOverlay = cloneReferencedElement(
-      this.props.renderLoadingOverlay({}),
+      this.props.renderLoadingOverlay({style: loadingOverlayStyle, loadingIndicatorColor: loadingIndicatorColor}),
       { ref: component => { this._loadingOverlay = component; } }
     );
 
