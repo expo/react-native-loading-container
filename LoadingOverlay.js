@@ -8,6 +8,7 @@
 import React from 'react';
 import {
   Animated,
+  ActivityIndicator,
   Easing,
   StyleSheet,
   View,
@@ -68,7 +69,7 @@ export default class LoadingOverlay extends React.Component {
         {
           React.Children.count(this.props.children) > 0 ?
             this.props.children :
-            <DefaultLoadingIndicator />
+            <ActivityIndicator size="large" color={this.props.loadingIndicatorColor} />
         }
       </Animated.View>
     );
@@ -85,5 +86,5 @@ let styles = StyleSheet.create({
     right: 0,
     justifyContent: 'center',
     alignItems: 'center',
-  },
+  }
 });
