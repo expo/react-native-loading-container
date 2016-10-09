@@ -11,9 +11,8 @@ import {
   Easing,
   StyleSheet,
   View,
+  ActivityIndicator,
 } from 'react-native';
-
-import DefaultLoadingIndicator from './DefaultLoadingIndicator';
 
 const FADE_DELAY_MS = 85;
 
@@ -68,7 +67,7 @@ export default class LoadingOverlay extends React.Component {
         {
           React.Children.count(this.props.children) > 0 ?
             this.props.children :
-            <DefaultLoadingIndicator />
+            <ActivityIndicator size="large" />
         }
       </Animated.View>
     );
