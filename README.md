@@ -1,4 +1,4 @@
-# LoadingContainer [![Slack](http://slack.exponentjs.com/badge.svg)](http://slack.exponentjs.com)
+# LoadingContainer [![Slack](http://slack.expo.io/badge.svg)](http://slack.expo.io)
 
 LoadingContainer is a component that co-ordinates fetching data, displaying a loading indicator while that's in progress, and an error message with a retry button when a request fails.
 
@@ -22,7 +22,7 @@ Import LoadingContainer as a JavaScript module:
 import LoadingContainer from 'react-native-loading-container';
 ```
 
-The only two props that are required are `onLoadStartAsync` and `onReadyAsync` - these must both be [async functions](https://medium.com/the-exponent-log/react-native-meets-async-functions-3e6f81111173#.y5ulf6wqj) (or return Promises), and must resolve when they are completed.
+The only two props that are required are `onLoadStartAsync` and `onReadyAsync` - these must both be async functions (or return Promises), and must resolve when they are completed.
 
 `onLoadStartAsync` is responsible for fetching the data that the scene needs to render and returning it. In the example below, we return the JSON response from the reactnative subreddit. If an exception is thrown in this function, an error overlay is rendered where the user can tap to retry. Tapping retry will invoke this function again. The return value of `onLoadStartAsync` is fed into `_onReadyAsync`.
 
@@ -56,7 +56,7 @@ export default class ListScreen extends React.Component {
 }
 ```
 
-A complete, runnable example is available in [Examples/StarterTemplate](https://github.com/exponentjs/react-native-loading-container/tree/master/Examples/StarterTemplate), or you can try it from Exponent at [exp://exp.host/@brentvatne/StarterTemplate](https://exp.host/@brentvatne/StartTemplate).
+A complete, runnable example is available in [Examples/StarterTemplate](https://github.com/expo/react-native-loading-container/tree/master/Examples/StarterTemplate).
 
 LoadingContainer can be used anywhere, but is especially well-suited to wrapping the content of your scene components. A scene component is the top-level component for each route.
 

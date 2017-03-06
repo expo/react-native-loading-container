@@ -1,17 +1,9 @@
-/**
- * This is the entry point for your experience that you will run on Exponent.
- *
- * Start by looking at the render() method of the component called
- * FullScreenLoaderExample. This is where the text and example components are.
- */
-'use strict';
-
+import Expo from 'expo';
 import React from 'react';
 import {
-  AppRegistry,
   BackAndroid,
   Platform,
-  StatusBarIOS,
+  StatusBar,
   StyleSheet,
   Navigator,
   View,
@@ -20,11 +12,13 @@ import {
 import ExNavigator from '@exponent/react-native-navigator';
 import ExRouter from 'ExRouter';
 
+console.ignoreYellowBox = true;
+
 class Main extends React.Component {
 
   componentDidMount() {
-    if (StatusBarIOS) {
-      StatusBarIOS.setStyle('light-content');
+    if (StatusBar) {
+      StatusBar.setBarStyle('light-content');
     }
 
     if (BackAndroid) {
@@ -69,4 +63,4 @@ let styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('main', () => Main);
+Expo.registerRootComponent(Main);

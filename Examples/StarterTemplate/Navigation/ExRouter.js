@@ -38,7 +38,7 @@ const ExRouter = {
       },
 
       getSceneClass() {
-        return require('ListScreen');
+        return require('ListScreen').default;
       },
     };
   },
@@ -48,7 +48,7 @@ const ExRouter = {
       ...baseRoute,
 
       renderScene(navigator) {
-        let DetailScreen = require('DetailScreen');
+        let DetailScreen = require('DetailScreen').default;
         return (
           <DetailScreen
             url={url}

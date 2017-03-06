@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 
 import ExNavigator from '@exponent/react-native-navigator';
-import ResponsiveImage from '@exponent/react-native-responsive-image';
+import ResponsiveImage from '@expo/react-native-responsive-image';
 
 export default class BackButton extends React.Component {
   static propTypes = {

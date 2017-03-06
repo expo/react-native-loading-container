@@ -5,10 +5,12 @@
   "main": "main.js",
   "author": "brentvatne@gmail.com",
   "dependencies": {
-    "@exponent/react-native-navigator": "^0.3.5",
-    "@exponent/react-native-responsive-image": "0.0.4",
+    "@expo/react-native-responsive-image": "^1.2.1",
+    "@exponent/react-native-navigator": "^0.4.9",
+    "expo": "^14.0.2",
+    "react": "~15.4.0",
     "react-mixin": "^3.0.3",
-    "react-native": "exponentjs/react-native#2015-11-13",
+    "react-native": "https://github.com/exponent/react-native/archive/sdk-14.0.0.tar.gz",
     "react-native-loading-container": "file:../..",
     "react-native-timer-mixin": "^0.11.0"
   },
