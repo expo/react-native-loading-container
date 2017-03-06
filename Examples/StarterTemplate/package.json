@@ -1,7 +1,7 @@
 {
   "name": "StarterTemplate",
   "version": "1.0.0",
-  "description": "Hello Exponent!",
+  "description": "Hello!",
   "main": "main.js",
   "author": "brentvatne@gmail.com",
   "dependencies": {

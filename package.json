@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/exponentjs/react-native-loading-container.git"
+    "url": "git+https://github.com/expo/react-native-loading-container.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/exponentjs/react-native-loading-container/issues"
+    "url": "https://github.com/expo/react-native-loading-container/issues"
   },
-  "homepage": "https://github.com/exponentjs/react-native-loading-container#readme",
+  "homepage": "https://github.com/expo/react-native-loading-container#readme",
   "dependencies": {
     "react-clone-referenced-element": "^1.0.1",
     "react-mixin": "^3.0.3",
