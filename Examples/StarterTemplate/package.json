@@ -5,8 +5,8 @@
   "main": "main.js",
   "author": "brentvatne@gmail.com",
   "dependencies": {
+    "@expo/react-native-navigator": "^0.4.10",
     "@expo/react-native-responsive-image": "^1.2.1",
-    "@exponent/react-native-navigator": "^0.4.9",
     "expo": "^14.0.2",
     "react": "~15.4.0",
     "react-mixin": "^3.0.3",

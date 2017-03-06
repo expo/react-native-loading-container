@@ -12,7 +12,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import ExNavigator from '@exponent/react-native-navigator';
+import ExNavigator from '@expo/react-native-navigator';
 import ResponsiveImage from '@expo/react-native-responsive-image';
 
 export default class BackButton extends React.Component {
