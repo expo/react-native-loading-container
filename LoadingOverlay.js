@@ -1,10 +1,3 @@
-/**
- * Copyright 2015-present 650 Industries. All rights reserved.
- *
- * @providesModule LoadingOverlay
- */
-'use strict';
-
 import React from 'react';
 import {
   Animated,
@@ -17,14 +10,10 @@ import {
 const FADE_DELAY_MS = 85;
 
 export default class LoadingOverlay extends React.Component {
-  constructor(props, context) {
-    super(props, context);
-
-    this.state = {
-      overlayHidden: false,
-      overlayOpacity: new Animated.Value(1),
-    };
-  }
+  state = {
+    overlayHidden: false,
+    overlayOpacity: new Animated.Value(1),
+  };
 
   fadeOverlay() {
     Animated.sequence([

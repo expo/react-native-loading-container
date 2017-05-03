@@ -1,17 +1,11 @@
-/**
- * Copyright 2015-present 650 Industries. All rights reserved.
- *
- * @providesModule LoadingContainer
- */
-'use strict';
-
-import React, { PropTypes } from 'react';
+import React from 'react';
 import {
   StyleSheet,
   View,
 } from 'react-native';
 import ReactMixin from 'react-mixin';
 import TimerMixin from 'react-native-timer-mixin';
+import PropTypes from 'prop-types';
 
 import cloneReferencedElement from 'react-clone-referenced-element';
 
@@ -37,28 +31,13 @@ export default class LoadingContainer extends React.Component {
     renderErrorOverlay: props => <ErrorOverlay {...props} />,
   };
 
-  constructor(props, context) {
-    super(props, context);
 
-    this._attemptLoadAsync = this._attemptLoadAsync.bind(this);
-    this._handleError = this._handleError.bind(this);
-
-    this.state = {
-      isLoading: false,
-    };
-  }
+  state = {
+    isLoading: false,
+  };
 
   componentDidMount() {
     this._attemptLoadAsync().done();
-  }
-
-  showLoadingOverlay() {
-    this._errorOverlay.hideOverlay();
-    this._loadingOverlay.showOverlay();
-  }
-
-  async reloadAsync() {
-    return this._attemptLoadAsync();
   }
 
   render() {
@@ -81,7 +60,17 @@ export default class LoadingContainer extends React.Component {
     );
   }
 
-  async _attemptLoadAsync() {
+
+  showLoadingOverlay = () => {
+    this._errorOverlay.hideOverlay();
+    this._loadingOverlay.showOverlay();
+  }
+
+  reloadAsync = async () => {
+    return this._attemptLoadAsync();
+  }
+
+  _attemptLoadAsync = async () => {
     if (this.state.isLoading) {
       return;
     }
@@ -102,7 +91,7 @@ export default class LoadingContainer extends React.Component {
     this.setState({ isLoading: false });
   }
 
-  _handleError(e) {
+  _handleError = (e) => {
     this.setState({ isLoading: false });
     this._errorOverlay && this._errorOverlay.showOverlay();
     this._loadingOverlay && this._loadingOverlay.hideOverlay();

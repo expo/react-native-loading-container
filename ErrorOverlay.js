@@ -1,11 +1,5 @@
-/**
- * Copyright 2015-present 650 Industries. All rights reserved.
- *
- * @providesModule ErrorOverlay
- */
-'use strict';
-
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Image,
   StyleSheet,

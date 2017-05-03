@@ -7,10 +7,10 @@
   "dependencies": {
     "@expo/react-native-navigator": "^0.4.10",
     "@expo/react-native-responsive-image": "^1.2.1",
-    "expo": "^14.0.2",
-    "react": "~15.4.0",
+    "expo": "^16.0.0",
+    "react": "16.0.0-alpha.6",
     "react-mixin": "^3.0.3",
-    "react-native": "https://github.com/exponent/react-native/archive/sdk-14.0.0.tar.gz",
+    "react-native": "https://github.com/exponent/react-native/archive/sdk-16.0.0.tar.gz",
     "react-native-loading-container": "file:../..",
     "react-native-timer-mixin": "^0.11.0"
   },

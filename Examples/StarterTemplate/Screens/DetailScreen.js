@@ -51,6 +51,7 @@ export default class DetailScreen extends React.Component {
           {this._renderStory()}
           {this._renderNoComments()}
           <ListView
+            enableEmptySections
             style={{flex: 1}}
             dataSource={this.state.dataSource}
             renderRow={this._renderRow} />
